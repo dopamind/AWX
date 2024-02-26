@@ -1,0 +1,33 @@
+{
+    "githubIssues.queries": [
+        {
+            "label": "Mes problèmes",
+            "query": "is:open assignee:${user} repo:${owner}/${repository}",
+            "groupBy": [
+                "milestone"
+            ]
+        },
+        {
+            "label": "Problèmes créés",
+            "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+        },
+        {
+            "label": "Problèmes récents",
+            "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+        }
+    ],
+    "githubPullRequests.queries": [
+        {
+            "label": "En attente de mon évaluation",
+            "query": "is:open review-requested:${user}"
+        },
+        {
+            "label": "Qui me sont assignées",
+            "query": "is:open assignee:${user}"
+        },
+        {
+            "label": "Créé(es) par moi",
+            "query": "is:open author:${user}"
+        }
+    ]
+}
