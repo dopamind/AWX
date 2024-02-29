@@ -6,7 +6,7 @@
   tasks:
     - name: Get Installed Firmware Inventory.
       dellemc.openmanage.idrac_firmware_info:
-        idrac_ip: "192.168.1.99"
-        idrac_user: "root"
-        idrac_password: "Root123."
+        idrac_ip: "{{ host }}"
+        idrac_user: "{{ username }}"
+        idrac_password: "{{ password }}"
       delegate_to: localhost
