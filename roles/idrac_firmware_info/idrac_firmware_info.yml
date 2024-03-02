@@ -1,0 +1,10 @@
+---
+- name: Get Installed Firmware Inventory
+  hosts: idrac
+  gather_facts: false
+  vars_files:
+    - ../vars_files/credentials.yml
+  vars:
+    target: "{{ gather_facts_target }}"
+  roles:
+    - dellemc.openmanage.idrac_firmware_info
